@@ -1,0 +1,21 @@
+Cancer,Value,Inc_Mort
+Lung,1368524,Incidence
+Prostate,1276106,Incidence
+Colorectum,1026215,Incidence
+Stomach,683754,Incidence
+Liver,596574,Incidence
+Bladder,424082,Incidence
+Oesophagus,399699,Incidence
+Non-Hodgkin lymphoma,284713,Incidence
+Kidney,254507,Incidence
+Leukaemia,249454,Incidence
+Lung,1184947,Mortality
+Prostate,358989,Mortality
+Colorectum,484224,Mortality
+Stomach,513555,Mortality
+Liver,548375,Mortality
+Bladder,148270,Mortality
+Oesophagus,357190,Mortality
+Non-Hodgkin lymphoma,145969,Mortality
+Kidney,113822,Mortality
+Leukaemia,179518,Mortality

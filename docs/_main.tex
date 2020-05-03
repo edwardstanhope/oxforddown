@@ -27,7 +27,7 @@
 % This one will format for PDF output (ie equal margins, no extra blank pages):
 %\documentclass[a4paper,nobind]{templates/ociamthesis}
 %UL 2 Dec 2018: pass this in from YAML
-\documentclass[a4paper, nobind]{templates/ociamthesis}
+\documentclass[a4paper, twoside]{templates/ociamthesis}
 
 
 % UL 30 Nov 2018 pandoc puts lists in 'tightlist' command when no space between bullet points in Rmd file
@@ -126,7 +126,7 @@
 
 %UL 3 Dec 2018: set this from YAML in index.Rmd
 \usepackage[style=authoryear, sorting=nyt, backend=biber, maxcitenames=2, useprefix, doi=true, isbn=false, uniquename=false]{biblatex}
-\newcommand*{\bibtitle}{Works Cited}
+\newcommand*{\bibtitle}{References}
 
 % This makes the bibliography left-aligned (not 'justified') and slightly smaller font.
 \renewcommand*{\bibfont}{\raggedright\small}
@@ -141,11 +141,9 @@
 
 %%%%% THESIS / TITLE PAGE INFORMATION
 % Everybody needs to complete the following:
-\title{\texttt{oxforddown}:\\
-An Oxford University Thesis\\
-Template for R Markdown}
-\author{Author Name}
-\college{Your College}
+\title{\texttt{The\ effects\ of\ exercise\ in\ women\ diagnosed\ with\ breast\ cancer\ at\ different\ stages\ of\ the\ cancer\ treatment\ continuum}}
+\author{Edward N. Stanhope}
+\college{Faculty of Education, Health and Wellbeing}
 
 % Master's candidates who require the alternate title page (with candidate number and word count)
 % must also un-comment and complete the following three lines:
@@ -158,7 +156,7 @@ Template for R Markdown}
 % Your full degree name.  (But remember that DPhils aren't "in" anything.  They're just DPhils.)
 \degree{Doctor of Philosophy}
 % Term and year of submission, or date if your board requires (eg most masters)
-\degreedate{Michaelmas 2018}
+\degreedate{TBC 2024}
 
 
 %%%%% YOUR OWN PERSONAL MACROS
@@ -204,18 +202,14 @@ Template for R Markdown}
 % The level that gets a number:
 \setcounter{secnumdepth}{2}
 % The level that shows up in the ToC:
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{1}
 
 
 %%%%% ABSTRACT SEPARATE
 % This is used to create the separate, one-page abstract that you are required to hand into the Exam
 % Schools.  You can comment it out to generate a PDF for printing or whatnot.
 \begin{abstractseparate}
-  This \emph{R Markdown} template is for writing an Oxford University thesis. The template is built using Yihui Xie's \texttt{bookdown} package, with heavy inspiration from Chester Ismay's \texttt{thesisdown} and the \texttt{OxThesis} \LaTeX~template (most recently adapted by John McManigle).
-  
-  This template's sample content include illustrations of how to write a thesis in R Markdown, and largely follows the structure from \href{https://ulyngs.github.io/rmarkdown-workshop-2019/}{this R Markdown workshop}.
-  
-  Congratulations for taking a step further into the lands of open, reproducible science by writing your thesis using a tool that allows you to transparently include tables and dynamically generated plots directly from the underlying data. Hip hooray!
+  INSERT ABSTRACT HERE
 \end{abstractseparate}
 
 % JEM: Pages are roman numbered from here, though page numbers are invisible until ToC.  This is in
@@ -227,34 +221,24 @@ Template for R Markdown}
 
 %%%%% DEDICATION -- If you'd like one, un-comment the following.
 \begin{dedication}
-  For Yihui Xie
+  DEDICATIONS GO HERE
 \end{dedication}
 
 %%%%% ACKNOWLEDGEMENTS -- Nothing to do here except comment out if you don't want it.
 \begin{acknowledgements}
- 	This is where you will normally thank your advisor, colleagues, family and friends, as well as funding and institutional support. In our case, we will give our praises to the people who developed the ideas and tools that allow us to push open science a little step forward by writing plain-text, transparent, and reproducible theses in R Markdown.
-
-We must be grateful to John Gruber for inventing the original version of Markdown, to John MacFarlane for creating Pandoc (\url{http://pandoc.org}) which converts Markdown to a large number of output formats, and to Yihui Xie for creating \texttt{knitr} which introduced R Markdown as a way of embedding code in Markdown documents, and \texttt{bookdown} which added tools for technical and longer-form writing.
-
-Special thanks to \href{http://chester.rbind.io}{Chester Ismay}, who created the \texttt{thesisdown} package that helped many a PhD student write their theses in R Markdown. And a very special tahnks to John McManigle, whose adaption of Sam Evans' adaptation of Keith Gillow's original maths template for writing an Oxford University DPhil thesis in \LaTeX~provided the template that I adapted for R Markdown.
-
-Finally, profuse thanks to JJ Allaire, the founder and CEO of \href{http://rstudio.com}{RStudio}, and Hadley Wickham, the mastermind of the tidyverse without whom we'd all just given up and done data science in Python instead. Thanks for making data science easier, more accessible, and more fun for us all.
+ 	INCLUDE THE ACKNOWLEDGEMENTS HERE
 
 \begin{flushright}
-Ulrik Lyngs \\
-Linacre College, Oxford \\
-2 December 2018
+Edward N. Stanhope \\
+Faculty of Education, Health and Wellbeing, University of Wolverhampton \\
+INSERT DATE HERE
 \end{flushright}
 \end{acknowledgements}
 
 
 %%%%% ABSTRACT -- Nothing to do here except comment out if you don't want it.
 \begin{abstract}
-	This \emph{R Markdown} template is for writing an Oxford University thesis. The template is built using Yihui Xie's \texttt{bookdown} package, with heavy inspiration from Chester Ismay's \texttt{thesisdown} and the \texttt{OxThesis} \LaTeX~template (most recently adapted by John McManigle).
-
-This template's sample content include illustrations of how to write a thesis in R Markdown, and largely follows the structure from \href{https://ulyngs.github.io/rmarkdown-workshop-2019/}{this R Markdown workshop}.
-
-Congratulations for taking a step further into the lands of open, reproducible science by writing your thesis using a tool that allows you to transparently include tables and dynamically generated plots directly from the underlying data. Hip hooray!
+	INSERT ABSTRACT HERE
 \end{abstract}
 
 %%%%% MINI TABLES
@@ -262,6 +246,8 @@ Congratulations for taking a step further into the lands of open, reproducible s
 % (and remove \minitoc from the chapter files) if you don't want this.  Un-comment either of the
 % next two lines if you want a per-chapter list of figures or tables.
   \dominitoc % include a mini table of contents
+  \dominilof  % include a mini list of figures
+  \dominilot  % include a mini list of tables
 
 % This aligns the bottom of the text of each page.  It generally makes things look better.
 \flushbottom
@@ -296,31 +282,132 @@ Congratulations for taking a step further into the lands of open, reproducible s
 
 \adjustmtc
 
-Welcome to the \emph{R Markdown} Oxford University thesis template.
-This sample content is adapted from \href{https://github.com/ismayc/thesisdown}{\texttt{thesisdown}} and the formatting of PDF output is adapted from the \href{https://github.com/mcmanigle/OxThesis}{OxThesis LaTeX template}.
-Hopefully, writing your thesis in R Markdown will provide a nicer interface to the OxThesis template if you haven't used TeX or LaTeX before.
-More importantly, using \emph{R Markdown} allows you to embed chunks of code directly into your thesis and generate plots and tables directly from the underlying data, avoiding copy-paste steps.
-This will get you into the habit of doing reproducible research, which benefits you long-term as a researcher, but also will greatly help anyone that is trying to reproduce or build upon your results down the road.
+\hypertarget{background}{%
+\section{Background}\label{background}}
 
-Using LaTeX together with \emph{Markdown} is more consistent than the output of a word processor, much less prone to corruption or crashing, and the resulting file is smaller than a Word file.
-While you may never have had problems using Word in the past, your thesis is likely going to be about twice as large and complex as anything you've written before, taxing Word's capabilities.
+Cancer is the one of the world's leading health problems, with one in five men and one in six women developing the disease, and one in eight men and one in eleven women losing their life to it (GLOBOCAN). Cancer occurs due to the continual upregulated proliferation of cancer cells, which grow and divide at an uncontrolled rate, rather than responding to signals that control cellular behaviour (Feitelson et al., 2015; Hanahan \& Weinberg, 2011). The abnormal proliferation of cells (tumour) can occur in a variety of cells within the body and there are therefore hundreds of distinct types of cancer, all of which behave and respond to treatment differently. A tumour may be benign, in which the cells remain confined to their original location, or malignant whereby cells invade surrounding tissues and are able to spread throughout the body (metastasis). The confinement of benign tumours makes surgical intervention possible, whereas the spread of malignant cells often makes them resistant to such localised treatment.
+The original hallmarks of cancer describe six processes that lead to the development and progression of cancer, self-sufficiency in growth signals, insensitivity to anti-growth signals, evading apoptosis, limitless replicative potential, sustained angiogenesis, and tissue invasion and metastasis (Hanahan \& Weinberg, 2000). Since, technological advancements have led to a superior understanding of cancer hallmarks and inflammation, genomic instability and mutation, deregulation of cellular energetics and avoidance of immune destruction were recognised as `emerging' cancer hallmarks (Figure 1) (Hanahan \& Weinberg, 2011).
 
-\hypertarget{why-use-it}{%
-\section*{Why use it?}\label{why-use-it}}
-\addcontentsline{toc}{section}{Why use it?}
+\begin{figure}
 
-\emph{R Markdown} creates a simple and straightforward way to interface with the beauty of LaTeX.
-Packages have been written in \textbf{R} to work directly with LaTeX to produce nicely formatting tables and paragraphs.
-In addition to creating a user friendly interface to LaTeX, \emph{R Markdown} allows you to read in your data, analyze it and to visualize it using \textbf{R}, \textbf{Python} or other languages, and provide documentation and commentary on the results of your project.\\
-Further, it allows for results of code output to be passed inline to the commentary of your results.
-You'll see more on this later, focusing on \textbf{R}. If you are more into \textbf{Python} or something else, you can still use \emph{R Markdown} - see \href{https://bookdown.org/yihui/rmarkdown/language-engines.html}{`Other language engines'} in Yihui Xie's \href{https://bookdown.org/yihui/rmarkdown/language-engines.html}{\emph{R Markdown: The Definitive Guide}}.
+{\centering \includegraphics[width=0.8\linewidth]{figures/hallmarks} 
 
-\hypertarget{who-should-use-it}{%
-\section*{Who should use it?}\label{who-should-use-it}}
-\addcontentsline{toc}{section}{Who should use it?}
+}
 
-Anyone who needs to use data analysis, math, tables, a lot of figures, complex cross-references, or who just cares about reproducibility in research can benefit from using \emph{R Markdown}.
-If you are working in `softer' fields, the user-friendly nature of the \emph{Markdown} syntax and its ability to keep track of and easily include figures, automatically generate a table of contents, index, references, table of figures, etc. should still make it of great benefit to your thesis project.
+\caption{Ten Hallmarks of Cancer}\label{fig:hallmark-figure}
+\end{figure}
+
+\hypertarget{cancer-development-and-progression}{%
+\section{Cancer Development and Progression}\label{cancer-development-and-progression}}
+
+\hypertarget{hallmark-one-replicative-immortality}{%
+\subsection{Hallmark One: Replicative Immortality}\label{hallmark-one-replicative-immortality}}
+
+A `normal' cell in the body is limited by the number of successive cell cycles it can go through, known as the Hayflick limit (Hayflick, 1965; Hayflick \& Moorhead, 1961). This is due, in part, to the shortening of specialised chromatin structures at the end of chromosomes (telomeres) after each mitotic division, which protect against the end to end chromosome fusions that threaten cell viability. Each replication typically loses 50 to 100 nucleotides of DNA telomere. Once the telomere shortens beyond a specific limit, usually the `uncapping' of telomere ends, it triggers the p53 pathway, preventing further proliferation. Though, the reasons for this progressive shortening is unclear (Reddel, 2000). In addition, oncogenic and mitogenic signals also induce senescence, establishing a barrier against tumorigenesis.
+
+Telomere length is an important factor in the development and progression of many human diseases, specifically those associated with age, where there is increased telomere degradation (Blasco, 2005). It is generally accepted that cancer cells have unlimited replicative potential and are able to overcome senescence and subsequent cell death (Hanahan \& Weinberg, 2011; Reddel, 2000). An array of evidence suggests that cancer cells are able to elongate their chromosome telomeres through specialised DNA polymerase (telomerase) that adds repeated segments to the telomere (Blasco, 2005; Bodnar et al., 1998; Dimri, 2005; Hanahan \& Weinberg, 2011). Kim and colleagues (1994) reported more than 90\% of tumours contained increased telomerase activity (Kim et al., 1994).
+Although, it has since been discovered that not all cancers have an active telomerase, which lead researchers to explore alternative explanations for the increased lengthening of telomeres. One suggestion has been that it may be possible for tumour formation to occur, without the presence telomerase, if the telomere has a sufficient reservoir of telomere repeats before it reaches the `limit' triggering the DNA damage response (Dagg et al., 2017; Viceconte et al., 2017). The development of cancer is a complex process and the abrogation of senescence alone does not lead to tumour development.
+
+\hypertarget{hallmark-two-genome-instability}{%
+\subsection{Hallmark Two: Genome Instability}\label{hallmark-two-genome-instability}}
+
+insert text here
+
+\hypertarget{hallmark-three-evasion-of-growth-suppressor-signals}{%
+\subsection{Hallmark Three: Evasion of Growth Suppressor Signals}\label{hallmark-three-evasion-of-growth-suppressor-signals}}
+
+Tumour suppressor genes contribute to the fidelity of the cell cycle replication process by limiting cell growth, inhibiting cell transformation and preventing proliferation (Hanahan \& Weinberg, 2011). The genes are responsible for regulating the cell cycle, apoptosis, differentiation, signal transduction and cellular adhesion, genomic instability surveillance and DNA repair. Tumour suppressor genes are commonly lost or deleted in cancer patients, allowing cells to replicate and grow. p53 or TP53 and retinoblastoma associated (Rb) proteins govern the decisions of a cell to proliferate, or activate apoptosis, and are the most commonly mutated genes in cancer patients. The mechanisms by which tumour suppressor genes are inactivated depends on the gene involved and therefore vary tumour to tumour, for instance the mutation BRCA1 and BRCA2 predisposes women to breast and ovarian cancers (Deng \& Scott, 2000).
+
+p53 (TP53), Rb1, BRCA1 and BRCA2 are all examples of intragenic mutations which are able to down regulate tumour suppressor function by inappropriate expression of transcriptional activators and the promotion of methylation, repressing tumour suppressors. Conceptually, tumour suppressor genes can be classified into two categories; gatekeepers and caretakers (Oliveira, Ross, \& Fletcher, 2005; Zhou, Zhang, Liu, Yang, \& He, 2011). Caretaker tumour suppressors are genes whose loss of function is not directly associated with tumour development. Whereas, gatekeeper tumour suppressor genes (p53, Rb) directly inhibit tumour growth and promote cell death, therefore, inactivity of these genes facilitates cancer formation and proliferation.
+The retinoblastoma (Rb) protein determines whether a cell should proceed to grow and divide, or not. The gene plays a vital role in cell cycle checkpoint control, whereby active Rb1 binds to transcription factor E2F and renders it inactive. Retinoblastoma (Rb) proteins largely function extracellularly, whereas, TP53 (p53) operates within the cell (intracellularly) to detect signals of stress or abnormality and is deleted or mutated in 50\% of all cancers (Oliveira et al., 2005). When the gene detects abnormal genome damage or excessive nucleotide pools, growth promoting signal, glucose or suboptimal oxygenation TP53 (p53) ceases further cell-cycle progression or initiates apoptosis (Hanahan \& Weinberg, 2011). Therefore, any down regulation of these gene pathways makes cell proliferation and tumour growth possible.
+
+TP53 mutation is more common in BRCA1 and BRCA2 breast cancer though the prevalence of TP53 mutation is lower in breast cancer generally than many other cancers and is typically associated with more aggressive conditions (Taylor \& Stark, 2001). Though there appears to be some inconsistency in the literature with regard to the relationship between Rb1 and TP53 tumour suppressor expression and breast cancer prognosis (Oliveira et al., 2005).
+
+\hypertarget{hallmark-four-resistance-to-cell-death}{%
+\subsection{Hallmark Four: Resistance to cell death}\label{hallmark-four-resistance-to-cell-death}}
+
+Apoptosis (programmed cell death) serves as a natural barrier to cancer development and progression and plays an essential role in development, immunity and disease where removal of superfluous cells promotes organismal health (Adams \& Cory, 2007; Lowe, Cepero, \& Evan, 2004). Cancer cells evade apoptosis due to signalling imbalances that result in elevated levels of oncogene. Apoptosis is governed by both upstream regulators and downstream effectors. Regulators are either extracellular death inducing signals (FAS ligand/FAS receptor) which form the extracellular apoptotic program, or intracellular sensors which form the intracellular apoptotic program (Hanahan \& Weinberg, 2011). The cells decision to undergo apoptosis is largely determined by intracellular cysteine proteases and is primarily regulated by the BCL-2 protein family that respond to DNA damage, gamma irradiation, oncogene activation and the withdrawal of growth factor (Adams \& Cory, 2007). BCL-2 proteins BCL-XL, MCL-1 and BFL1 are pro-survival proteins that regulate protein turnover that respond to cell death stimuli (Campbell \& Tait, 2018), it is therefore of no surprise that there is increased expression of these proteins in many cancer types. The upregulation of pro-survival BCL-2 proteins can occur through chromosomal translocation, gene amplification and increased gene expression and consequently increasing cell death resistance. Whereas, BCL-2 proteins BIM, BAD, BID, NOXA, PUMA, BMF, HRK and BIK are pro-apoptotic. Pro-apoptotic BCL-2 proteins in normal cells respond to stress to trigger cell death. Studies have revealed that effector proteins BAC, BAK and BOK conform to similar pro-survival BCL-2 proteins (Suzuki, Youle, \& Tjandra, 2000). However, similarly to the effects of upregulating pro-survival proteins, the downregulation of pro-apoptotic proteins can lead to cell death resistance.
+
+Although, the cellular conditions that trigger apoptosis are yet to be fully determined, several abnormalities can be identified in the role of tumour development. Primarily tumour cells are able to circumvent apoptosis by hindering the TP53 tumour suppressor responsible for regulating NOXA and PUMA in the presence of DNA damage. Additionally, tumours may increase the expression of pro-survival proteins or decrease the expression of pro-apoptotic proteins, as previously discussed.
+
+\hypertarget{hallmark-five-sustained-proliferation}{%
+\subsection{Hallmark Five: Sustained Proliferation}\label{hallmark-five-sustained-proliferation}}
+
+Normal tissues are able to tightly control and regulate the production and release of growth promoting signals, in order to maintain tissue homeostasis. On the other hand, cancer cells possess the ability to downregulate these signals enabling the cell to proliferate due to replicative immortality, genomic instability, evasion of growth suppressor signals and their resistance to cell death previously discussed. The mitogenic signalling in cancer cells is better understood than the proliferative signals functioning within normal tissue and can occur in a variety of ways (Lemmon \& Schlessinger, 2010; Witsch, Sela, \& Yarden, 2010). The cell may produce growth factor ligands and stimulate autocrine proliferation, resulting in transactivation of epidermal growth factor receptor (EGFR) and other pathways that contribute to the proliferation of tumour cells. Cancer cells also have the capacity to stimulate normal tissue cells within the stroma/microenvironment (extracellular matrix (ECM)), which in turn promotes cancer cell growth factors, giving rise to a vicious cycle. In addition receptor proteins on the cancer cell surface can be elevated, enhancing their responsiveness to ligand growth factor and downregulating receptor cell signalling (Hanahan \& Weinberg, 2011).
+
+Furthermore, cancer cell proliferation is increased in the presence of oncogene mutation. Mutations in either the upstream of downstream Ras signalling pathways are associated with cancer progression and it appears that the deregulation of Ras signalling is essential for tumourgenesis (Fernández-Medarde \& Santos, 2011). Although, Ras mutations (H-Ras, N-Ras or K-Ras) are less common in high incidence cancers such as breast, prostate and liver, high levels of H-Ras in breast cancer indicate a worse prognosis (Watson et al., 1991).
+
+\hypertarget{hallmark-six-altered-metabolism}{%
+\subsection{Hallmark Six: Altered Metabolism}\label{hallmark-six-altered-metabolism}}
+
+insert text here
+
+\hypertarget{hallmark-seven-avoiding-immune-destruction}{%
+\subsection{Hallmark Seven: Avoiding Immune Destruction}\label{hallmark-seven-avoiding-immune-destruction}}
+
+insert text here
+
+\hypertarget{hallmark-eight-tumour-promoting-inflammation}{%
+\subsection{Hallmark Eight: Tumour Promoting Inflammation}\label{hallmark-eight-tumour-promoting-inflammation}}
+
+insert text here
+
+\hypertarget{hallmark-nine-induction-of-angiogenesis}{%
+\subsection{Hallmark Nine: Induction of Angiogenesis}\label{hallmark-nine-induction-of-angiogenesis}}
+
+Tumour cells, like any cell, require nutrients and oxygen to survive. To meet the demand for nutrients, oxygen and immune cells, and in order to remove waste products that are associated with cancer metabolism, the tumour develops its own vascular network, this process is referred to as angiogenesis. The process of angiogenesis is triggered by the increased nutrient and oxygen requirements of tumour tissue and occurs in stages. Initially, the basement membrane becomes injured and hypoxic. In response, angiogenic factors activate endothelial cells which assemble into tubes (vasculogenesis) and begin to sprout new vessels from the existing ones. Though, the up regulation of angiogenic factors alone is not enough for angiogenesis of the neoplasm, there must also be simultaneous down regulation of inhibitors (Nishida, Yano, Nishida, Kamura, \& Kojiro, 2006). Angiogenic factors continue to influence the angiogenic process, leading to normal vasculature dormancy. In normal cells angiogenesis is required for tissue repair but is capable of ``switching off'', where in cancer cells it remains ``on'' (Hanahan \& Folkman, 1996).
+
+The up regulation of vascular endothelial growth factor-A (VEGF-A) has been well-established as an angiogenesis inducer, other proteins capable of inducing angiogenesis include basic fibroblast growth factor (bFGF), transforming growth factor (TGF) alpha and beta, tumour necrosis factor (TNF)-alpha, interleukin-8, epidermal growth factors among others. Ligands encoded by VEGF-A genes are partially responsible for the development of new blood and over expression of VEGF can be caused by both hypoxia and oncogene signalling (Ferrara, 2009; Gabhann \& Popel, 2008). Hypoxia occurs due to the growing distance between tumour cells and capillaries. In response, the tumour cells secrete VEGF into the surrounding tissue activating endothelial cells to produce metalloproteinases (MMPs), which break down the extracellular matrix and fills the void between cells (Nelson, Fingleton, Rothenberg, \& Matrisian, 2000; Nishida et al., 2006). After endothelial cells divide and migrate, they form tubes that, with the help of integrin alpha and beta, mature into new blood vessels (Nelson et al., 2000). A number of studies have reported a strong correlation between VEGF expression and cancer prognosis (Nishida et al., 2006), with the following studies demonstrating this in breast cancer (Kinoshita et al., 2001; Kurebayashi et al., 1999; Skobe et al., 2001). In addition to increased VEGF expression, upregulated proangiogenic signals, such as fibroblast growth factor, sustain angiogenesis (Baeriswyl \& Christofori, 2009).
+
+As previously discussed, the upregulation of VEGF and other proangiogenic signals is not enough to maintain angiogenesis, there must be simultaneous down regulation of angiogenesis inhibitors. Thrombospondin-1 (TSP-1), an angiogenesis inhibitor, is down regulated when it binds to transmembrane receptors displayed by the endothelial cells (Hanahan \& Weinberg, 2011). Downregulation of other inhibitors may include angiostatin, endostatin, interferon, platelet factor 4, prolactin 16 kd fragment, and tissue inhibitor of metalloproteinase-1, -2, and -3 (Nishida et al., 2006).
+
+\hypertarget{hallmark-ten-activation-of-invasion-and-metastasis}{%
+\subsection{Hallmark Ten: Activation of Invasion and Metastasis}\label{hallmark-ten-activation-of-invasion-and-metastasis}}
+
+A series of successive cellular changes, often termed the invasion-metastasis cascade, leads to the invasion and metastasis of cancer cells. The multistep process can be broken down into the following steps: invasion, intravasation, surviving systematic circulation and extravasation. Epithelial-mesenchymal transition (EMT) has been identified as a regulatory program that possesses the ability to invade, resist apoptosis and disseminate transformed epithelial cells (Klymkowsky \& Savagner, 2009; Polyak \& Weinberg, 2009; Thiery, Acloque, Huang, \& Nieto, 2009; Yilmaz \& Christofori, 2009). Intracellular signalling pathways (TGF-beta, growth factors that bind with RTK and WNT ligands) are triggered when ligands bind to transmembrane receptors. These signals are expressed in the tumour microenvironment, where tumour cells undergo EMT (Ye \& Weinberg, 2015). Genetic variation may also contribute to tumour cell EMT as evidenced by Neve and colleagues (2006) who found mesenchymal features in the absence of extrinsic signalling (Neve et al., 2006). In both instances activating EMT transcription factors that repress epithelial cell to cell adhesion whilst simultaneously promoting mesenchymal factors that alter cytoskeleton, protrusion formation and cell migration (Pearson, 2019).
+
+The suppression of cell to cell adhesion protein E-cadherin, which has both invasive traits and metastatic properties, is the most established mechanism associated with cell migration (Pearson, 2019; Zaidel-Bar \& Geiger, 2010). The reduced E-cadherin in transformed epithelial cells is enough to induce EMT, invasion and metastasis, however, the loss alone is not substantial enough to promote EMT in all circumstances (Khalil et al., 2017; Onder et al., 2008). EMT transcription factors (EMT-TF) also induce mesenchymal genes that are capable of altering cell morphology, migration and ECM remodelling (Thiery et al., 2009). Changes in cell morphology allow EMT cells through the ECM via existing tracks created by non-tumour populations in the microenvironment (Yamaguchi, Wyckoff, \& Condeelis, 2005), the EMT program itself allows tumour cells to remodel the ECM, facilitating initial invasion from ductal structures, migration and intravasation into blood vessels (Pearson, 2019).
+
+The signalling that occurs between cancer cells and connective tissue cells of the organ (stroma) are capable of stimulating invasive behaviours. Mesenchymal stem cells (MSCs) in the tumour stroma release CCL5/RANTES in response to these signals, which has been found to encourage changes in the phenotype of cancer cells and lead to metastatic spread (Karnoub et al., 2007). Matrix degrading enzymes, found in the periphery of the tumour can further facilitate invasion (Hanahan \& Weinberg, 2011). In metastatic breast cancer, epidermal growth factor (EGF) is supplied to the breast cancer cells by tumour-associated macrophages (TAMs), in response cancer cells syntheses CF-1 which stimulates macrophage production and the subsequent intravasation and dissemination of cancer cells (Qian \& Pollard, 2010; Wyckoff et al., 2007). Macrophages also secrete protein, rich in cysteine (SPARC/osteonectin), that promote invasion and adhesion to other components of the ECM, and are required for spontaneous metastasis (Sangaletti et al., 2008). This colocalization of macrophages, tumour cells, and endothelial cells (tumour microenvironment of metastasis (TMEM)), has been shown to be a prognostic marker for poor survival in breast cancer (Robinson et al., 2009).
+
+Metastasis occurs in two distinct phases; the physical dissemination of cells from a local region to distant tissue and the adaptation of cells to foreign microenvironments, that results in successful colonization. Colonization is a process of great complexity and while in some cancers the suppressor factors released by the tumour render metastases dormant until resection (Demicheli, Retsky, Hrushesky, Baum, \& Gukas, 2008), in others, such as breast cancer, metastases may develop decades after initial treatment (surgical or pharmacological treatment) (Barkan, Green, \& Chambers, 2010).
+
+\hypertarget{epidemiology}{%
+\section{Epidemiology}\label{epidemiology}}
+
+Population growth and age distribution are factors associated with the rapidly increasing cancer incidence and mortality worldwide, as well as changes in the prevalence of risk factors, many of which are associated with socioeconomic development. The Global Cancer Observatory estimated the worldwide population in 2018 to be more than 7.5 billion, of which over 43.5 million people were affected by cancer (5-year prevalence), 18 million new cases of cancer were reported, and more than 9.5 million deaths occurred. The most common cancers are lung, breast, colorectal and prostate, cumulatively these account for over half of new cancers (42.7\%) (Bray et al., 2018). The majority of new cancer cases were in men (52\%), where lung cancer was the most commonly occurring (15.5\%), followed closely by prostate (14.5\%) and colorectal (11.4\%) cancers.
+
+Forty-eight percent of new cancer cases in 2018 were in in women, with the most common cancer being breast cancer, which accounted for 25.4\% of all cancer cases and was over twice as common as its closest rivals; colorectal (9.7\%) and lung cancer (8.8\%) (Bray et al., 2018).
+
+Approximately two million cases of breast cancer are diagnosed every year, the equivalent of one new case every 16 seconds. Breast cancer is the most frequently diagnoses cancer in women across all continents, ranking highest in 154 of 185 countries, despite differences in per capita income (Bray et al., 2018). Incidence rates vary depending on regional income, with higher income countries experiencing more breast cancer cases.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{figures/Global Incidence} 
+
+}
+
+\caption{Top Cancer per Country, Estimated Crude Incidence Rates in 2018, Females, All Ages}(\#fig:Global Cancer Incidence)
+\end{figure}
+
+Having increased year on year, the European incidence rate reached 136.0 per 100,000 in 2018, with over five hundred newly diagnosed cases, an incidence rate five times greater than that of breast cancer incidence in Africa (26.2 per 100,000), three times greater than Asia (41.1 per 100,000) and double Latin America and the Caribbean (60.6 per 100,000). The only continent to experience greater incidence rates was North America, where the incidence rate is marginally bigger at 142.8 per 100,000.
+The highest incidence rates are seen in Belgium (203.7 per 100,000), The Netherlands (188.9 per 100,000), Italy (187.8 per 100,000), Luxembourg (175.4 per 100,000) and Germany (172.2 per 100,000). The United Kingdom registered 55,439 new breast cancer cases in 2018 and ranked ninth globally with an incidence rate 164.5 per 100,000. The lowest reported incidence is in Bhutan with 16 new cases and an incidence rate of 4.2 per 100,000, a 48.5-fold difference between the highest and lowest ranking countries. Breast cancer is also the leading cause of cancer mortality in over 100 countries (103 of 185) (Figure 4) (Bray et al., 2018).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{figures/Global Mortality} 
+
+}
+
+\caption{Top Cancer per Country, Estimated Crude Mortality Rates in 2018, Females, All Ages}(\#fig:Global Cancer Mortality)
+\end{figure}
+
+Breast cancer accounts for 15\% of all cancer related deaths worldwide and mortality rates are greatest in Europe (35.8 per 100,000) and North America (25.6 per 100,000). There appears to be less variability in mortality rates compared to incidence rates globally, with a 30-fold difference between the highest (Barbados; 62.9 per 100,000) and the lowest (Bhutan; 2.1 per 100,000) mortality rate. The United Kingdom reported 11,849 deaths in 2018 and ranked twenty-fourth in breast cancer mortality globally, with a mortality rate of 246.2 per 100,00.
+
+Medical advancements in breast cancer screening and treatment have seen drastic improvements in breast cancer survival rates, and as such increased breast cancer prevalence (Table 1). The breast cancer survival rate varies globally; with an estimated 5-year survival rate in developed countries of 80\%, whereas in middle and low-income countries it is 60\% and 40\% respectively, which may be related to screening programs, early detection, and modern medical care factors (Maajani et al., 2019).
+It is not surprising that the stage of breast cancer diagnosis greatly influences the survival rate of patients, with one year survival decreasing by 3\% (95\% CI 0, 8\%), 11\% (95\% CI 22\%, 31\%) and 40\% (95\% CI 39\%, 41\%) in those with stage II, stage III, and stage IV diagnosis respectively. This trend was consistent in the five year survival rates, with a rate of survival in stage I patients of 0.86 (95\% CI 0.82, 0.88), stage II patients of 0.69 (95\% CI 0.63, 0.74), stage III patients of 0.51 (0.45, 0.57) and stage IV patients of 0.32 (95\% CI 0.23, 0.42) and ten year survival rates, with a rate of survival in stage I patients of 0.82 (95\% CI 0.70, 0.92), stage II patients of 0.67 (95\% CI 0.59, 0.74), stage III patients of 0.41 (95\% CI 0.35, 0.47) and stage IV patients of 0.26 (95\% CI 0.10, 0.45).
+
+Hormonal, immunologic, and etiologic differences associated with aging are also prognostic factors for survival, with one, three, five and ten year survival being lower in women over the age of 50 years (1-year: 0.92 (95\% CI 0.90, 0.93), 3-year: 0.80 (95\% CI 0.75, 0.85), 5-year: 0.61 (95\% CI 0.66, 0.73), 10-Year: 0.48 (95\% CI 0.39, 0.58) compared with younger patients (1-year: 0.97 (95\% CI 0.95, 0.98), 3-year: 0.87 (95\% CI 0.84, 0.90), 5-year: 0.69 ( 95\% CI 0.66, 0.73), 10-year: 0.61 (95\% CI 0.55, 0.67) (Maajani et al., 2019). Survival is also greater in patients with hormone receptor positive and HER2-positive tumours, largely due to the effectiveness of aromatase inhibitors and trastuzumb treatments (Berry et al., 2005).
 
 \begin{savequote}
 Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
@@ -374,7 +461,7 @@ In other words, there is no need to indent basic text in the Rmd document (in fa
 \hypertarget{sub-and-superscript}{%
 \subsection{Sub and superscript}\label{sub-and-superscript}}
 
-Sub\textsubscript{2} and super\textsuperscript{2} script is created like this\textasciitilde{}2\textasciitilde{} and this\^{}2\^{}
+Sub\textsubscript{2} and super\textsuperscript{2} script is created like this\textasciitilde2\textasciitilde{} and this\^{}2\^{}
 
 \hypertarget{strikethrough}{%
 \subsection{Strikethrough}\label{strikethrough}}
@@ -382,7 +469,7 @@ Sub\textsubscript{2} and super\textsuperscript{2} script is created like this\te
 \begin{itemize}
 \tightlist
 \item
-  \sout{Strikethrough} is done \textasciitilde{}\textasciitilde{}like this\textasciitilde{}\textasciitilde{}
+  \sout{Strikethrough} is done \textasciitilde\textasciitilde like this\textasciitilde\textasciitilde{}
 \end{itemize}
 
 \hypertarget{escaping-aka-what-if-i-need-an-actual-asterisk}{%
@@ -391,7 +478,7 @@ Sub\textsubscript{2} and super\textsuperscript{2} script is created like this\te
 \begin{itemize}
 \tightlist
 \item
-  To include an actual *, \_ or \textbackslash{}, add another \textbackslash{} in front of them: \textbackslash{}*, \textbackslash{}\_, \textbackslash{}\textbackslash{}
+  To include an actual *, \_ or \textbackslash, add another \textbackslash{} in front of them: \textbackslash*, \textbackslash\_, \textbackslash\textbackslash{}
 \end{itemize}
 
 \hypertarget{endash-emdash}{%
@@ -418,7 +505,7 @@ Put a \textgreater{} in front of the line.
 \begin{itemize}
 \tightlist
 \item
-  are done with \#'s of increasing number, i.e.
+  are done with \#'s of increasing number, i.e.~
 
   \begin{itemize}
   \tightlist
@@ -431,7 +518,7 @@ Put a \textgreater{} in front of the line.
   \end{itemize}
 \end{itemize}
 
-In PDF output, a level-five heading will turn into a paragraph heading, i.e. \texttt{\textbackslash{}paragraph\{My\ level-five\ heading\}}, which appears as bold text on the same line as the subsequent paragraph.
+In PDF output, a level-five heading will turn into a paragraph heading, i.e.~\texttt{\textbackslash{}paragraph\{My\ level-five\ heading\}}, which appears as bold text on the same line as the subsequent paragraph.
 
 \hypertarget{lists}{%
 \subsection{Lists}\label{lists}}
@@ -527,16 +614,16 @@ Therefore, this line starts its own paragraph.
 \hypertarget{comments}{%
 \subsection{Comments}\label{comments}}
 
-To write comments within your text that won't actually be included in the output, use the same syntax as for writing comments in HTML. That is, \textless{}!-\/- this will not be included in the output -\/-\textgreater{}.
+To write comments within your text that won't actually be included in the output, use the same syntax as for writing comments in HTML. That is, \textless!-\/- this will not be included in the output -\/-\textgreater.
 
 \hypertarget{math}{%
 \subsection{Math}\label{math}}
 
 The syntax for writing math is stolen from LaTeX. To write a math expression that will be shown \textbf{inline}, enclose it in dollar signs.
-- This: \$A = \textbackslash{}pi*r\^{}\{2\}\$ Becomes: \(A = \pi*r^{2}\)
+- This: \$A = \textbackslash pi*r\^{}\{2\}\$ Becomes: \(A = \pi*r^{2}\)
 
 To write a math expression that will be shown in a block, enclose it in two dollar signs.\\
-This: \$\$A = \textbackslash{}pi*r\^{}\{2\}\$\$
+This: \$\$A = \textbackslash pi*r\^{}\{2\}\$\$
 
 Becomes:
 \[A = \pi*r^{2}\]
@@ -588,7 +675,7 @@ The syntax of a code chunk is shown in Figure \ref{fig:chunk-parts}.
 \includegraphics[width=1\linewidth]{figures/chunk-parts} \caption{Code chunk syntax}\label{fig:chunk-parts}
 \end{figure}
 
-Common chunk options include (see e.g. \href{https://bookdown.org/yihui/rmarkdown/r-code.html}{bookdown.org}):
+Common chunk options include (see e.g.~\href{https://bookdown.org/yihui/rmarkdown/r-code.html}{bookdown.org}):
 
 \begin{itemize}
 \tightlist
@@ -604,7 +691,7 @@ Common chunk options include (see e.g. \href{https://bookdown.org/yihui/rmarkdow
   \texttt{fig.scap}: short figure caption, which will be used in the `List of Figures' in the PDF front matter
 \end{itemize}
 
-\textbf{IMPORTANT}: Do \emph{not} use underscoores in your chunk labels - if you do, you are likely to get an error in PDF output saying something like ``! Package caption Error: \textbackslash{}caption outside float''.
+\textbf{IMPORTANT}: Do \emph{not} use underscoores in your chunk labels - if you do, you are likely to get an error in PDF output saying something like ``! Package caption Error: \textbackslash caption outside float''.
 
 \hypertarget{setup-chunks}{%
 \subsection{Setup chunks}\label{setup-chunks}}
@@ -828,7 +915,7 @@ Here is an example of an entry in a \textbf{.bib} file:
 In this entry highlighed section, `Shea2014' is the \textbf{citation identifier}.
 To default way to cite an entry in your text is with this syntax: \texttt{{[}@citation-identifier{]}}.
 
-So I might cite some things \autocites{Shea2014}{Lottridge2012}.
+So I might cite some things \autocite{Shea2014,Lottridge2012}.
 
 \hypertarget{pdf-output}{%
 \subsection{PDF output}\label{pdf-output}}
@@ -926,7 +1013,7 @@ We can also use \textbf{hyperlink syntax} and add \# before the label, though th
 
 It is a very good idea to create \textbf{custom labels} for our sections. This is because the automatically assigned labels will change when we change the titles of the sections - to avoid this, we can create the labels ourselves and leave them untouched if we change the section titles.
 
-We create custom labels by adding \texttt{\{\#label\}} after a header, e.g. \texttt{\#\ My\ section\ \{\#my-label\}}.
+We create custom labels by adding \texttt{\{\#label\}} after a header, e.g.~\texttt{\#\ My\ section\ \{\#my-label\}}.
 See \protect\hyperlink{cites-and-refs}{our chapter title} for an example. That was section \ref{cites-and-refs}.
 
 \hypertarget{figure-image-and-plot-references}{%
@@ -1179,15 +1266,15 @@ You will probably want to set the chunk options \texttt{out.width=\textquotesing
 \end{Shaded}
 
 In LaTeX output, however, this approach can cause odd behaviour.
-Therefore, when you build your thesis to PDF, split the PDF into an alphanumerically sorted sequence of \textbf{single-page} PDF files (you can do this automatically with the package \texttt{pdftools}). You can then use the appropriate LaTeX command to insert them, as shown below (for brevity, in the \texttt{oxforddown} sample content we're only including two pages from a published article)
-\emph{Note that the chunk option \texttt{results=\textquotesingle{}asis\textquotesingle{}} must be used.}
+Therefore, when you build your thesis to PDF, split the PDF into an alphanumerically sorted sequence of \textbf{single-page} PDF files (you can do this automatically with the package \texttt{pdftools}). You can then use the appropriate LaTeX command to insert them, as shown below (for brevity, in the \texttt{oxforddown} PDF sample content we're only including two pages)
+\emph{Note that the chunk option \texttt{results=\textquotesingle{}asis\textquotesingle{}} must be set.}
 You may also want to remove margins from the PDF files, which you can do with Adobe Acrobat (paid version) and likely other software.
 
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{# install.packages(pdftools)}
-\CommentTok{#split PDF in pages stored in figures/pdf_example/split/}
-\CommentTok{#pdftools::pdf_split("figures/pdf_example/Lyngs2020_FB.pdf",}
+\CommentTok{# split PDF into pages stored in figures/pdf_example/split/}
+\CommentTok{# pdftools::pdf_split("figures/pdf_example/Lyngs2020_FB.pdf",}
 \CommentTok{# output = "figures/pdf_example/split/")}
 
 \CommentTok{# grab the pages}
@@ -1207,8 +1294,6 @@ You may also want to remove margins from the PDF files, which you can do with Ad
 \end{Shaded}
 
 \newpage \begin{center} \makebox[\linewidth][c]{\includegraphics[width=1.2\linewidth]{figures/pdf_example/split/_000000000000001.pdf}} \end{center} \newpage \begin{center} \makebox[\linewidth][c]{\includegraphics[width=1.2\linewidth]{figures/pdf_example/split/_000000000000011.pdf}} \end{center}
-
-\newpage
 
 \hypertarget{customizing-referencing}{%
 \section{Customizing referencing}\label{customizing-referencing}}
@@ -1230,7 +1315,7 @@ However, note that this approach does not support chapter bibliographies (see Se
 \hypertarget{biblatex-custom}{%
 \subsection{Customizing biblatex and adding chapter bibliographies}\label{biblatex-custom}}
 
-This section provides one example of customizing biblatex. Much of this code was combined from searches on Stack Exchange and other sources (e.g. \href{https://tex.stackexchange.com/questions/10682/suppress-in-biblatex}{here}).
+This section provides one example of customizing biblatex. Much of this code was combined from searches on Stack Exchange and other sources (e.g.~\href{https://tex.stackexchange.com/questions/10682/suppress-in-biblatex}{here}).
 
 In \textbf{templates/template.tex}, one can replace the existing biblatex calls with the following to achieve referencing that looks like this:
 

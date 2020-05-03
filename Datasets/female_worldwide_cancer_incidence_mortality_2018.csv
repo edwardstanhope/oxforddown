@@ -1,0 +1,21 @@
+Cancer,Value,Inc_Mort
+Breast,2088849,Incidence
+Colorectum,823303,Incidence
+Lung,725352,Incidence
+Cervix uteri,569847,Incidence
+Thyroid,436344,Incidence
+Corpus uteri,382069,Incidence
+Stomach,349947,Incidence
+Ovary,295414,Incidence
+Liver,244506,Incidence
+Non-Hodgkin lymphoma,224877,Incidence
+Breast,626679,Mortality
+Colorectum,396568,Mortality
+Lung,576060,Mortality
+Cervix uteri,311365,Mortality
+Thyroid,25514,Mortality
+Corpus uteri,89929,Mortality
+Stomach,269130,Mortality
+Ovary,184799,Mortality
+Liver,233256,Mortality
+Non-Hodgkin lymphoma,102755,Mortality
