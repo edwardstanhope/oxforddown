@@ -74,7 +74,14 @@ insert text here
 
 ### Hallmark Eight: Tumour Promoting Inflammation
 
-insert text here
+The presence of immune cells in most cancer types was historically believed to represent the bodies anti-tumour response, and in many cases this is true. Though, evidence suggests that the tumour associated inflammatory response paradoxically accelerates tumourgenesis and assisting in the numerous hallmark capabilities discussed by supplying bioactive molecules to the tumour microenvironment (DeNardo, Andreu, & Coussens, 2010; Grivennikov, Greten, & Karin, 2010; Hanahan & Weinberg, 2011; Qian & Pollard, 2010). It is understood that inflammation acts throughout all stages of tumourgenesis and may contribute to tumour initiation through mutation, genomic instability, and epigenetic modification. Inflammation initiates the repair response, aids in the proliferation of cells including premalignant cells, and improves their likelihood of survival.
+
+The most frequently identified immune cell in the tumour microenviornemnt is tumour associated macrophages (TAMs) and T cells. The presence of TAM has been shown to increase tumour growth  and higher concentrations of TAM is associated with poorer prognosis (Murdoch, Muthana, Coffelt, & Lewis, 2008). While T cells can either be tumour suppressive or promoting, therefore, in some cancers increased T cells is associated with improved survival, however, many of the T cell subsets (CD8+, IFNgamma producing TH-1 and Th17) are involved in tumour promotion (Grivennikov et al., 2010).
+
+Some oncogenes, namely the RAS and MYC family, induce a transcriptional program that recruits leukocytes, increases tumour promoting chemokine and cytokine expression and triggers the angiogenic ‘switch’, all of which lead to the remodelling of the tumour microenvironment (Grivennikov et al., 2010). At some point during a tumours development it becomes starved of oxygen and nutrients, resulting in necrotic cell death and the release of proinflammatory mediators (IL-1 and HMGB1) (Vakkila & Lotze, 2004). The proinflammatory mediators produced by this process encourage neoangiogenesis and increase the availability of growth factor for surviving cancer cells.
+
+In addition to the cancer cells  and surrounding stroma (fibroblasts, endothelial cells, and mesenchymal cells) the tumour microenvironment, as a result of inflammation responses, contains innate (macrophages, neutrophils, mast cells, natural killer T cells (NKT) among others) and adaptive (T and B Lymphocytes) immune cells (De Visser, Eichten, & Coussens, 2006). These cells are able to communicate with one another via cytokine or chemokine production and/or direct contact and it is the balance of these cells which dictates whether pro- or anti-tumour immunity ensues.  
+
 
 ### Hallmark Nine: Induction of Angiogenesis
 
