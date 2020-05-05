@@ -66,11 +66,11 @@ Furthermore, cancer cell proliferation is increased in the presence of oncogene 
 
 ### Hallmark Six: Altered Metabolism
 
-insert text here
+Sustaining uncontrolled cell proliferation requires alterations in energy metabolism in order to fuel cell growth and division. Cancer cells can alter their energy production by limiting metabolism essentially to glycolysis despite oxygen availability (Hanahan & Weinberg, 2011). It may seem counterintuitive for cancer cells to alter their metabolism in this way, since glycolysis is known to be less efficient than mitochondrial oxidative phosphorylation, however, cancer cells compensate by upregulating glucose transporters (GLUT1) (Jones & Thompson, 2009). Fuelling in such a way activates oncogenes (RAS & MYC) and mutant tumour suppressors (TP53/p53), enabling the capabilities of other cancer hallmarks. Furthermore, the hypoxic environment creates an even greater reliance on glycolysis and subsequent upregulation of glucose transporters and glycolytic enzymes. Consequentially, lactate is produced and is a preferential source of energy in a subpopulation of oxygenated cells that utilize the citric acid cycle for energy production, to fuel growth and division.  Both increased oncoprotein (RAS) and hypoxia independently increase levels of transcription factor (HIF1alpha & HIF2alpha) and activate glycolysis (Hanahan & Weinberg, 2011; Jones & Thompson, 2009).
 
 ### Hallmark Seven: Avoiding Immune Destruction
 
-insert text here
+Immune surveillance is responsible for recognising and eliminating foreign matter, therefore, for tumour cells to develop they must go undetected. Early studies in genetically engineered mice have alluded that deficiencies in CD+8 cytotoxic T lymphocytes (CTLs), CD4+Th1 helper T cells or natural killer (NK) cells increased tumour incidence, suggesting that deficiencies in innate and/or active immunity contributes to tumour development (R. Kim, Emi, & Tanabe, 2007; Teng, Swann, Koebel, Schreiber, & Smyth, 2008). 
 
 ### Hallmark Eight: Tumour Promoting Inflammation
 
